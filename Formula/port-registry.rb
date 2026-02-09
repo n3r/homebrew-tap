@@ -5,13 +5,13 @@
 class PortRegistry < Formula
   desc "Local port registry to prevent Docker port conflicts"
   homepage "https://github.com/n3r/port-registry"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/n3r/port-registry/releases/download/v0.1.0/port-registry_0.1.0_darwin_amd64.tar.gz"
-      sha256 "492f014e5ec811a54f8c2579df3f9d0b7c1b6288cfae63437d94588df75538f2"
+      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_darwin_amd64.tar.gz"
+      sha256 "e03eb65799a749b304b289d3cdab8aade443ed3fe4ea23d06139ebba974f4a35"
 
       def install
         bin.install "port-server"
@@ -19,8 +19,8 @@ class PortRegistry < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/n3r/port-registry/releases/download/v0.1.0/port-registry_0.1.0_darwin_arm64.tar.gz"
-      sha256 "905b826d2bf1f18ebfd4b991a1e15dd5ddf875e83fc23fa9249264781b3c4b6f"
+      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_darwin_arm64.tar.gz"
+      sha256 "72100f0b44b7e2c578fe49dd6a91f140d709eae4280bbed7c5a2d083a00dad31"
 
       def install
         bin.install "port-server"
@@ -31,16 +31,16 @@ class PortRegistry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n3r/port-registry/releases/download/v0.1.0/port-registry_0.1.0_linux_amd64.tar.gz"
-      sha256 "791355ef64ad245f0cf8f227153459f4a11468f8c90fcf20f0f1d8bd4f7aa00a"
+      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_linux_amd64.tar.gz"
+      sha256 "50d3e0254e6a9666631c02d4ab7e81bf9455dac18c9334ae770984fccf83740e"
       def install
         bin.install "port-server"
         bin.install "portctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n3r/port-registry/releases/download/v0.1.0/port-registry_0.1.0_linux_arm64.tar.gz"
-      sha256 "da903eb5c221bd0038eb9b3d1c9fc1767b4486c600456bfcdf62dabb59ab8d11"
+      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_linux_arm64.tar.gz"
+      sha256 "fc544acb30fecfa10c662f2659f22895befb97307538550095bd992ecc54efce"
       def install
         bin.install "port-server"
         bin.install "portctl"
