@@ -5,25 +5,25 @@
 class PortRegistry < Formula
   desc "Local port registry to prevent Docker port conflicts"
   homepage "https://github.com/n3r/port-registry"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_darwin_amd64.tar.gz"
-      sha256 "e03eb65799a749b304b289d3cdab8aade443ed3fe4ea23d06139ebba974f4a35"
+      url "https://github.com/n3r/port-registry/releases/download/v0.3.0/port-registry_0.3.0_darwin_amd64.tar.gz"
+      sha256 "a24ce66aa09b69c4f1aa8e066ef473c293b0f51a99b9785c70dac7e9f655e9b7"
 
       def install
-        bin.install "port-server"
+        bin.install "port-registry"
         bin.install "portctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_darwin_arm64.tar.gz"
-      sha256 "72100f0b44b7e2c578fe49dd6a91f140d709eae4280bbed7c5a2d083a00dad31"
+      url "https://github.com/n3r/port-registry/releases/download/v0.3.0/port-registry_0.3.0_darwin_arm64.tar.gz"
+      sha256 "b6ca6cd310c0ce2f689e72772d9ddb5603bcd0a1c3b67aa7bc4d30ca9c1af204"
 
       def install
-        bin.install "port-server"
+        bin.install "port-registry"
         bin.install "portctl"
       end
     end
@@ -31,18 +31,18 @@ class PortRegistry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_linux_amd64.tar.gz"
-      sha256 "50d3e0254e6a9666631c02d4ab7e81bf9455dac18c9334ae770984fccf83740e"
+      url "https://github.com/n3r/port-registry/releases/download/v0.3.0/port-registry_0.3.0_linux_amd64.tar.gz"
+      sha256 "265b5fbd22a0671a9c121b4ac5cc74a59d70a39b5175af1531a46a815c5e0532"
       def install
-        bin.install "port-server"
+        bin.install "port-registry"
         bin.install "portctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n3r/port-registry/releases/download/v0.2.0/port-registry_0.2.0_linux_arm64.tar.gz"
-      sha256 "fc544acb30fecfa10c662f2659f22895befb97307538550095bd992ecc54efce"
+      url "https://github.com/n3r/port-registry/releases/download/v0.3.0/port-registry_0.3.0_linux_arm64.tar.gz"
+      sha256 "514d3324a9d13155341b636ff1115e5a3aaaef37bb29eb08797f49e5aa75f70a"
       def install
-        bin.install "port-server"
+        bin.install "port-registry"
         bin.install "portctl"
       end
     end
